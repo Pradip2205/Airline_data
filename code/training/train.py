@@ -52,8 +52,8 @@ run = Run.get_submitted_run()
 
 
 # Get a dataset from the workspace datasets collection
-dataset = ws.datasets['airline']
-data = dataset.to_pandas_dataframe()
+#dataset = ws.datasets['airline']
+data = pd.read_csv('airline_passengers.csv',index_col='Month',parse_dates=True)
 data.index.freq = 'MS'
 dataset_ts = data[['Thousands of Passengers']]
 
