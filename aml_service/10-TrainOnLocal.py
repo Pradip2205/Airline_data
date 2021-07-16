@@ -44,10 +44,10 @@ print(exp.name, exp.workspace.name, sep="\n")
 
 from azureml.core import Dataset
 
-blob_ds = ws.get_default_datastore()
-csv_paths = [(blob_ds, 'data/airline_passengers.csv')]
-tab_ds = Dataset.Tabular.from_delimited_files(path=csv_paths)
-tab_ds = tab_ds.register(workspace=ws, name='airline')
+# blob_ds = ws.get_default_datastore()
+# csv_paths = [(blob_ds, 'data/airline_passengers.csv')]
+# tab_ds = Dataset.Tabular.from_delimited_files(path=csv_paths)
+# tab_ds = tab_ds.register(workspace=ws, name='airline')
 
 # Editing a run configuration property on-fly.
 run_config_user_managed = RunConfiguration()
